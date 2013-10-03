@@ -1,41 +1,50 @@
 package net.pureessence.example;
 
+import org.springframework.beans.factory.annotation.Value;
 
 public class Person {
-    private String firstName;
-    private String lastName;
-    private String car;
-    private String email;
 
-    public String getFirstName() {
-        return firstName;
-    }
+  @Value("${first.name}")
+  private String firstName;
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+  @Value("${last.name}")
+  private String lastName;
 
-    public String getLastName() {
-        return lastName;
-    }
+  @Value("${car}")
+  private String car;
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+  @Value("${email}")
+  private String email;
 
-    public String getCar() {
-        return car;
-    }
+  public String getFirstName() {
+    return firstName;
+  }
 
-    public void setCar(String car) {
-        this.car = car;
-    }
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
 
-    public String getEmail() {
-        return email;
-    }
+  public String getLastName() {
+    return lastName;
+  }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
+
+  public String getCar() {
+    return car;
+  }
+
+  public void setCar(String car) {
+    this.car = car;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
 }
